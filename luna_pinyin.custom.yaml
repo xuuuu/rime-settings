@@ -132,6 +132,7 @@ patch:
       reset: 1
       states: [ 漢字, 汉字 ]
     - name: ascii_punct
+      reset: 1
       states: [ 。，, ．， ]
   engine/translators:
     - punct_translator
