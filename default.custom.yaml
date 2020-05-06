@@ -26,8 +26,8 @@ patch:
     # - { when: composing, accept: Tab, send: Page_Up } # Tab 翻页
     - { when: composing, accept: Tab, send: Right } # Tab 移动光标向右
     - { when: composing, accept: Shift+Tab, send: Page_Up }
-    - { when: paging, accept: minus, send: Page_Up }
-    - { when: has_menu, accept: equal, send: Page_Down }
+    # - { when: paging, accept: minus, send: Page_Up }
+    # - { when: has_menu, accept: equal, send: Page_Down }
     - { when: paging, accept: bracketleft, send: Page_Up }
     - { when: has_menu, accept: bracketright, send: Page_Down }
     # - {accept: "Control+p", send: Up, when: composing}
@@ -45,6 +45,9 @@ patch:
     # - { when: has_menu, accept: apostrophe, send: 3 }
     - { accept: comma, send: Page_Up, when: paging }
     - { accept: period, send: Page_Down, when: has_menu }
+    - { accept: KP_Enter, send: Return, when: has_menu }
+    - { accept: minus, toggle: ascii_mode, when: has_menu }
+    - { accept: "Shift+underscore", toggle: ascii_mode, when: has_menu }
     # - {accept: "Control+Shift+1", select: .next, when: always}
     # - {accept: "Control+Shift+2", toggle: ascii_mode, when: always}
     # - {accept: "Control+Shift+3", toggle: full_shape, when: always}
