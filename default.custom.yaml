@@ -46,8 +46,8 @@ patch:
     - { accept: comma, send: Page_Up, when: paging }
     - { accept: period, send: Page_Down, when: has_menu }
     - { accept: KP_Enter, send: Return, when: composing }
-    - { accept: minus, toggle: ascii_mode, when: always }
-    - { accept: "Shift+underscore", toggle: ascii_mode, when: always }
+    # - { accept: minus, send: Return, when: always }
+    # - { accept: "Shift+underscore", send: Return, when: always }
     # - {accept: "Control+Shift+1", select: .next, when: always}
     # - {accept: "Control+Shift+2", toggle: ascii_mode, when: always}
     # - {accept: "Control+Shift+3", toggle: full_shape, when: always}
